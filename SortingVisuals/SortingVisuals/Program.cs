@@ -20,7 +20,7 @@ namespace SortingVisuals
             window = new RenderWindow(new VideoMode((uint)window_width, (uint)window_height), "SortingVisuals");
             window.Closed += new EventHandler(OnClose);
 
-            BubbleSort sort = new BubbleSort();
+            BaseSort sort = new SelectionSort();
             sort.SetEntries(window_width, window_height);
 
             
@@ -29,7 +29,7 @@ namespace SortingVisuals
             while (window.IsOpen)
             {
                 window.DispatchEvents();
-                window.Clear(Color.Red);
+                window.Clear(Color.White);
 
                 sort.DoSort();
 
@@ -37,9 +37,12 @@ namespace SortingVisuals
                 {
                     RectangleShape lineEntry = new RectangleShape(new SFML.System.Vector2f(1, sort.GetCurrentSort()[i]));
                     lineEntry.FillColor = Color.Black;
-                    lineEntry.Position = new SFML.System.Vector2f(i, window_height - lineEntry.Size.Y);
+                    lineEntry.Position = new SFML.System.Vector2f(i, 0);
                     window.Draw(lineEntry);
                 }
+                
+
+                
 
                 window.Display();
 
