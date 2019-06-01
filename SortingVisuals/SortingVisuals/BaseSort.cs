@@ -31,5 +31,12 @@ namespace SortingVisuals
 
         public abstract void DoSort();
 
+        public void SwapNumbers(int one, int two)
+        {
+            int tmp = currentSort[one];
+            currentSort[one] = currentSort[two];
+            currentSort[two] = tmp;
+        }
+
     }
 }

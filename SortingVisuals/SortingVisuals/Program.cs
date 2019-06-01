@@ -20,7 +20,7 @@ namespace SortingVisuals
             window = new RenderWindow(new VideoMode((uint)window_width, (uint)window_height), "SortingVisuals");
             window.Closed += new EventHandler(OnClose);
 
-            BaseSort sort = new SelectionSort();
+            BaseSort sort = new ShakeSort();
             sort.SetEntries(window_width, window_height);
 
             

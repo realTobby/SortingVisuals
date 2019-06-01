@@ -60,6 +60,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectionSort.cs" />
+    <Compile Include="ShakeSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

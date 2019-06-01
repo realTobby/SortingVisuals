@@ -18,9 +18,7 @@ namespace SortingVisuals
 
             if(currentSort[pointerIndex] > currentSort[pointerIndex + 1])
             {
-                int tmpNumber = currentSort[pointerIndex + 1];
-                currentSort[pointerIndex + 1] = currentSort[pointerIndex];
-                currentSort[pointerIndex] = tmpNumber;
+                SwapNumbers(pointerIndex, pointerIndex + 1);
             }
 
             pointerIndex++;

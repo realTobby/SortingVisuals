@@ -19,14 +19,11 @@ namespace SortingVisuals
             {
                 if(currentSort[i] < currentSort[pointerIndex])
                 {
-                    int tmp = currentSort[pointerIndex];
-                    currentSort[pointerIndex] = currentSort[i];
-                    currentSort[i] = tmp;
+                    SwapNumbers(pointerIndex, i);
                     break;
                 }
 
             }
-
 
             pointerIndex++;
             SetCurrentSort(currentSort);
